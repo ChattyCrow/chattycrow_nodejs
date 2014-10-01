@@ -1,6 +1,6 @@
 {
   "name": "chattycrow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Chatty Crow client library to call Chatty Crow API.",
   "homepage" : "http://chattycrow.com",
   "author" : "NetBrick s.r.o.",
