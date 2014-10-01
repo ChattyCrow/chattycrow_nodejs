@@ -1,7 +1,8 @@
 request = require 'request'
 fs = require 'fs'
+EventEmitter = require('events').EventEmitter
 
-class ChattyCrow
+class ChattyCrow extends EventEmitter
   host    = 'https://chattycrow.com/api/v1/'
   token   = null
   channel = null
