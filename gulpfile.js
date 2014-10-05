@@ -11,9 +11,17 @@ gulp.task('coffee', function() {
       .pipe(gulp.dest('./lib/'));
 });
 
-gulp.task('watch', function() {
-  return gulp.watch('src/**/*.coffee', ['coffee']);
-  return gulp.watch('./lib/*.js', ['lint']);
+gulp.task('coffee-test', function() {
+  return gulp.src('test/src/**/*.coffee')
+      .pipe(plumber())
+      .pipe(coffee({ bare: true }))
+      .on('error', gutil.log)
+      .pipe(gulp.dest('./test/'));
 });
 
-gulp.task('default', [ 'coffee', 'watch' ]);
+gulp.task('watch', function() {
+         gulp.watch('src/**/*.coffee', ['coffee']);
+  return gulp.watch('test/src/**/*.coffee', ['coffee-test']);
+});
+
+gulp.task('default', [ 'coffee', 'coffee-test', 'watch' ]);
