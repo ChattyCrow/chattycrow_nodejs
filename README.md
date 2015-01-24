@@ -1,5 +1,5 @@
 [![Chatty
-Crow](http://chattycrow.com/crow3logo.png)](http://chattycrow.com)
+Crow](https://avatars1.githubusercontent.com/u/9012750?v=3&s=200)](http://chattycrow.com)
 
 # ChattyCrow - Node JS library
 
